@@ -14,11 +14,11 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('tenders', function (Blueprint $table) {
-            $table->string('id')->unique();
+            $table->string('id')->unique(); // в качестве id решил использовать колонку "Номер" из test_task_data.csv
             $table->bigInteger('external_code');
             $table->foreignId('status_id')->nullable()->constrained()->onDelete('set null');
-            $table->string('title');
-            $table->timestamp('updated_at')->nullable();
+            $table->string('name');
+            $table->timestamp('date')->nullable();
         });
     }
 

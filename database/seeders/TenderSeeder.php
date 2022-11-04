@@ -27,14 +27,14 @@ class TenderSeeder extends Seeder
                 if ($row == 1) continue;
 
                 $status = Status::where(['title' => $data[2]])->first();
-                $updated_at = Carbon::createFromFormat('d.m.Y H:i:s', $data[4]);
+                $date = Carbon::createFromFormat('d.m.Y H:i:s', $data[4]);
 
                 Tender::create([
                     'external_code' => $data[0],
                     'id' => $data[1],
                     'status_id' => $status?->id,
-                    'title' => $data[3],
-                    'updated_at' => $updated_at,
+                    'name' => $data[3],
+                    'date' => $date,
                 ]);
             }
             fclose($handle);
