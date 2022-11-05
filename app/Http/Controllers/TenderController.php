@@ -4,7 +4,9 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTenderRequest;
+use App\Http\Requests\TendersListRequest;
 use App\Models\Tender;
+use App\Services\TenderService;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\JsonResponse;
@@ -18,11 +20,10 @@ class TenderController extends Controller
      *
      * @return JsonResponse
      */
-    public function index()
+    public function index(TendersListRequest $request, TenderService $service)
     {
         try {
-            $perPage = request()->all()['per_page'] ?? null;
-            return response()->json(Tender::paginate($perPage));
+            return response()->json($service->getItems($request));
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             $code = Response::HTTP_INTERNAL_SERVER_ERROR;
