@@ -14,7 +14,7 @@ final class TenderService
         $perPage = $data['per_page'] ?? null;
         $tenders = new Tender();
         if (!empty($data['date'])) $tenders = $tenders->where('date', 'like', "%{$data['date']}%");
-        if (!empty($data['name'])) $tenders = $tenders->where('name', $data['name']);
+        if (!empty($data['name'])) $tenders = $tenders->where('name', 'like', "%{$data['name']}%");
         return $tenders->paginate($perPage);
     }
 }

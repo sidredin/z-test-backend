@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "775423bd-2630-4b07-a06a-a582235dd50a",
+		"name": "z-test-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9220372"
+	},
+	"item": [
+		{
+			"name": "Tenders",
+			"item": [
+				{
+					"name": "Get tenders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tenders?date=2022-08-14 19:25&name=Лабор",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tenders"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "2",
+									"description": "optional. Default: 15",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "optional. Default: 1",
+									"disabled": true
+								},
+								{
+									"key": "date",
+									"value": "2022-08-14 19:25",
+									"description": "optional. Accepted formats: 2022-08-14 19:23:39, 2022-08-14 19:23, 2022-08-14, 2022-08"
+								},
+								{
+									"key": "name",
+									"value": "Лабор",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get tenders by date",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/tenders?date=2022-08-14 19:25:14",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"tenders"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "2",
+											"description": "optional. Default: 15",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional. Default: 1",
+											"disabled": true
+										},
+										{
+											"key": "date",
+											"value": "2022-08-14 19:25:14",
+											"description": "optional. Examples: 2022-08-14 19:23:39, 2022-08-14 19:23, 2022-08-14, 2022-08"
+										},
+										{
+											"key": "name",
+											"value": "Лабор",
+											"description": "optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Nov 2022 09:19:31 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": \"16887-3\",\n            \"external_code\": 152467230,\n            \"status_id\": 2,\n            \"name\": \"Годовой конкурс на поставку конвейерных роликов 2018-2019\",\n            \"date\": \"2022-08-14 19:25:14\"\n        },\n        {\n            \"id\": \"17660-2\",\n            \"external_code\": 152467180,\n            \"status_id\": 2,\n            \"name\": \"Лабороаторная посуда\",\n            \"date\": \"2022-08-14 19:25:14\"\n        },\n        {\n            \"id\": \"17662-2\",\n            \"external_code\": 152467198,\n            \"status_id\": 2,\n            \"name\": \"Лабораторное оборудование и комплектующик к ниму.\",\n            \"date\": \"2022-08-14 19:25:14\"\n        },\n        {\n            \"id\": \"18138\",\n            \"external_code\": 152467336,\n            \"status_id\": 3,\n            \"name\": \"Приобретение оборудования Регион-DXE для ОАО Компания г.Череповец\",\n            \"date\": \"2022-08-14 19:25:14\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:58080/api/tenders?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:58080/api/tenders?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:58080/api/tenders?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:58080/api/tenders\",\n    \"per_page\": 15,\n    \"prev_page_url\": null,\n    \"to\": 4,\n    \"total\": 4\n}"
+						},
+						{
+							"name": "Get tenders by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/tenders?name=Лабор",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"tenders"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "2",
+											"description": "optional. Default: 15",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional. Default: 1",
+											"disabled": true
+										},
+										{
+											"key": "date",
+											"value": "2022-08-14 19:25:14",
+											"description": "optional. Examples: 2022-08-14 19:23:39, 2022-08-14 19:23, 2022-08-14, 2022-08",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "Лабор",
+											"description": "optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Nov 2022 09:20:15 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": \"15130-3\",\n            \"external_code\": 152466704,\n            \"status_id\": 2,\n            \"name\": \"Запрос скидки: ГСОАО Компания,индикат. полоски и бумага для лаборатории ОАО Компания.\",\n            \"date\": \"2022-08-14 19:25:12\"\n        },\n        {\n            \"id\": \"15907-2\",\n            \"external_code\": 152466953,\n            \"status_id\": 1,\n            \"name\": \"Приобретение лабораторной посуды для БФ ОАО Компания (2 кв)\",\n            \"date\": \"2022-08-14 19:25:13\"\n        },\n        {\n            \"id\": \"16204-2\",\n            \"external_code\": 152462646,\n            \"status_id\": 2,\n            \"name\": \"Запрос скидки: Печь муфельная лабораторная SNOL 4/1100 поставкой в апреле т.г.\",\n            \"date\": \"2022-08-14 19:24:55\"\n        },\n        {\n            \"id\": \"16587-2\",\n            \"external_code\": 152465036,\n            \"status_id\": 2,\n            \"name\": \"ЗАПРОС СКИДКИ!!! Приобретение лабораторной мебели для ОАО Компания\",\n            \"date\": \"2022-08-14 19:25:05\"\n        },\n        {\n            \"id\": \"16617-2\",\n            \"external_code\": 152465089,\n            \"status_id\": 2,\n            \"name\": \"ЗАПРОС СКИДКИ! Приобретение лабораторных электродов для ОАО Компания г.Череповец\",\n            \"date\": \"2022-08-14 19:25:06\"\n        },\n        {\n            \"id\": \"16676-2\",\n            \"external_code\": 152464535,\n            \"status_id\": 2,\n            \"name\": \"Лабораторная оборудование и комплектующие.\",\n            \"date\": \"2022-08-14 19:25:03\"\n        },\n        {\n            \"id\": \"16795\",\n            \"external_code\": 152462620,\n            \"status_id\": 2,\n            \"name\": \"Штатив лабораторный ШЛ-96\",\n            \"date\": \"2022-08-14 19:24:55\"\n        },\n        {\n            \"id\": \"17660-2\",\n            \"external_code\": 152467180,\n            \"status_id\": 2,\n            \"name\": \"Лабороаторная посуда\",\n            \"date\": \"2022-08-14 19:25:14\"\n        },\n        {\n            \"id\": \"17662-2\",\n            \"external_code\": 152467198,\n            \"status_id\": 2,\n            \"name\": \"Лабораторное оборудование и комплектующик к ниму.\",\n            \"date\": \"2022-08-14 19:25:14\"\n        },\n        {\n            \"id\": \"18016\",\n            \"external_code\": 152466765,\n            \"status_id\": 2,\n            \"name\": \"Срочное приобретение лабораторного инвентаря (мешалка, дозатор) для БФА\",\n            \"date\": \"2022-08-14 19:25:12\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:58080/api/tenders?page=1\",\n    \"from\": 1,\n    \"last_page\": 1,\n    \"last_page_url\": \"http://localhost:58080/api/tenders?page=1\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:58080/api/tenders?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": null,\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": null,\n    \"path\": \"http://localhost:58080/api/tenders\",\n    \"per_page\": 15,\n    \"prev_page_url\": null,\n    \"to\": 10,\n    \"total\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "Post tender",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1000-15\",\n    \"external_code\": 12,\n    \"status_id\": 1,\n    \"name\": \"Тестовый\",\n    \"date\": \"2022-08-14 19:25:12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tenders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tenders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post tender",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"1000-11\",\n    \"external_code\": 12,\n    \"status_id\": 1, //optional\n    \"name\": \"Тестовый\",\n    \"date\": \"2022-08-14 19:25:12\" //optional. Defalt - current date&time without time zone\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/tenders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"tenders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Nov 2022 09:40:09 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"1000-11\",\n    \"external_code\": 12,\n    \"status_id\": 1,\n    \"name\": \"Тестовый\",\n    \"date\": \"2022-08-14 19:25:12\"\n}"
+						},
+						{
+							"name": "Post tender (only required fields)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"1000-12\",\n    \"external_code\": 12,\n    \"name\": \"Тестовый\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/tenders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"tenders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Nov 2022 09:42:53 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"1000-12\",\n    \"external_code\": 12,\n    \"name\": \"Тестовый\",\n    \"date\": \"2022-11-07 09:42:53\"\n}"
+						},
+						{
+							"name": "Post tender with errors",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"17660-2\",\n    \"status_id\": 1,\n    \"name\": \"Тестовый\",\n    \"date\": \"2022-08-14 19:25:12\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/tenders",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"tenders"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.25"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 07 Nov 2022 10:22:52 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The id has already been taken. (and 1 more error)\",\n    \"errors\": {\n        \"id\": [\n            \"The id has already been taken.\"\n        ],\n        \"external_code\": [\n            \"The external code field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get tender",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tenders/13498-4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tenders",
+								"13498-4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({key: 'Accept', value: 'application/json' });"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

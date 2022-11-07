@@ -17,3 +17,11 @@ Then run:
 ```bash
 make init
 ```
+
+or run the commands you need from the Makefile.
+
+## Testing API with Postman
+
+In [Postman app](https://www.postman.com/downloads/) import `z-test-backend.postman_collection.json`
+and `z-test-backend.postman_environment.json files`, located in `documentation` directory of this repository. Then
+choose the `z-test-backend environment` and test API.
